@@ -7,9 +7,9 @@ class Drink {
     this.#price = price
   }
 
-  toString() {
-    return { name: this.#name, price: this.#price }
-  }
+  get name() { return this.#name }
+
+  get price() { return this.#price }
 
 }
 

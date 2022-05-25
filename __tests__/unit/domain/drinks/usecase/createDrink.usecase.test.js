@@ -1,7 +1,8 @@
 const CreateUseCase = require('../../../../../src/domain/drinks/usecases/createDrink.usecase')
 const InvalidDrinkException = require('../../../../../src/domain/drinks/exceptions/InvalidDrinkException');
+const Drink = require("../../../../../src/domain/drinks/entities/Drink");
 
-const repositoryMock = { save: () => { return 1 } }
+const repositoryMock = { save: (drink) => { return 1 } }
 
 describe('Object validations', () => {
   it('Should throw a exception when drink is undefined', () => {
@@ -17,34 +18,44 @@ describe('Object validations', () => {
   })
 
   it('Should throw a exception when drink price property is undefined', () => {
+    const drink = new Drink({ name: 'water' })
+
     expect(() => {
-      CreateUseCase(repositoryMock).create({ name: 'water' })
+      CreateUseCase(repositoryMock).create(drink)
     }).toThrowError(InvalidDrinkException)
   })
 
   it('Should throw a exception when drink name property is undefined', () => {
+    const drink = new Drink({ price: 2.5 })
+
     expect(() => {
-      CreateUseCase(repositoryMock).create({ price: 2.5 })
+      CreateUseCase(repositoryMock).create(drink)
     }).toThrowError(InvalidDrinkException)
   })
 })
 
 describe('Price validations', () => {
   it('Should accept price equals 0', () => {
+    const drink = new Drink({ name: 'water', price: 0 })
+
     expect(
-        CreateUseCase(repositoryMock).create({ name: 'water', price: 0.0 })
+        CreateUseCase(repositoryMock).create(drink)
     ).toBe(1)
   })
 
   it('Should not accept negative value for price', () => {
+    const drink = new Drink({ name: 'water', price: (-2.5) })
+
     expect(() => {
-      CreateUseCase(repositoryMock).create({ name: 'water', price: -2.5 })
+      CreateUseCase(repositoryMock).create(drink)
     }).toThrowError(InvalidDrinkException)
   })
 
   it('Should create drink and return a identification', () => {
+    const drink = new Drink({ name: 'water', price: 2.5 })
+
     expect(
-        CreateUseCase(repositoryMock).create({ name: 'water', price: 2.5 })
+        CreateUseCase(repositoryMock).create(drink)
     ).toBe(1)
   })
 })
