@@ -1,4 +1,4 @@
-module.exports = class RefrigeranteEntity {
+class Drink {
   #name
   #price
 
@@ -12,3 +12,5 @@ module.exports = class RefrigeranteEntity {
   }
 
 }
+
+module.exports = Drink
