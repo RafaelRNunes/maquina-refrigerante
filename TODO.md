@@ -32,25 +32,23 @@
 - ### MR-2:
   #### USER STORY
   - **AS A** customer
+  - **I WANT** see drinks available
+  - **SO THAT** can choice one and buy
+
+  #### ACCEPTANCE CRITERIA
+  - ##### AC-1
+    - **GIVEN**
+    - **WHEN** call find available drinks function
+    - **THEN** see a list of available drinks
+
+- ### MR-3:
+  #### USER STORY
+  - **AS A** customer
   - **I WANT** to buy a drink
   - **SO THAT** drink the drink
 
   #### ACCEPTANCE CRITERIA
   - ##### AC-1
-    - **GIVEN**
-    - **WHEN**
-    - **THEN**
-
----
-
-- ### MR-3:
-  #### USER STORY
-  - **AS A** customer
-  - **I WANT** to pay the drink and receive the fewest change coins as possible
-  - **SO THAT** don't have a full pocket of coins
-
-  #### ACCEPTANCE CRITERIA
-  - ##### AC-1
-    - **GIVEN**
-    - **WHEN**
-    - **THEN**
+    - **GIVEN** a drink of choice and payment
+    - **WHEN** call buy function
+    - **THEN** receive a drink and the fewest change coins as possible
