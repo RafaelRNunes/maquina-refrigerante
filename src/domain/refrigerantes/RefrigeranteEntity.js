@@ -1,14 +1,14 @@
 module.exports = class RefrigeranteEntity {
-  #nome
-  #preco
+  #name
+  #price
 
-  constructor(nome, preco) {
-    this.#nome = nome
-    this.#preco = preco
+  constructor({ name, price }) {
+    this.#name = name
+    this.#price = price
   }
 
   toString() {
-    return { nome: this.#nome, preco: this.#preco }
+    return { name: this.#name, price: this.#price }
   }
 
 }

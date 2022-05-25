@@ -1,5 +1,5 @@
-const CreateUseCase = require('../../../../src/domain/refrigerantes/usecase/createRefrigerante.usecase')
-const RefrigeranteInvalidoException = require("../../../../src/domain/refrigerantes/exceptions/RefrigeranteInvalidoException");
+const CreateUseCase = require('../../../../../src/domain/refrigerantes/usecase/createRefrigerante.usecase')
+const RefrigeranteInvalidoException = require('../../../../../src/domain/refrigerantes/exceptions/RefrigeranteInvalidoException');
 const repository = { save: () => { return 1 } }
 
 describe('Object validations', () => {
