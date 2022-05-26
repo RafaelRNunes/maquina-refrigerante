@@ -1,3 +1,29 @@
+const Repository = () => {
+  let currencies = []
+
+  const findAll = () => {
+    return currencies
+  }
+
+  const save = (currency) => {
+    currencies.push(currency)
+  }
+
+  return { findAll, save }
+}
+
+const Create = (repository) => {
+  const create = (currency) => {
+    repository.save(currency)
+  }
+
+  return { create }
+}
+
+const repository = Repository()
+const service = Create(repository)
+service.findAll = () => { return repository.findAll() }
+
 describe('Create Currencies', () => {
   it('should create currencies', () => {
     service.create({ description: '1 cent - Penny', value: .01, quantity: 100 })
