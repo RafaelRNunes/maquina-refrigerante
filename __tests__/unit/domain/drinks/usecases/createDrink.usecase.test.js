@@ -3,11 +3,19 @@ const InvalidDrinkException = require('../../../../../src/domain/drinks/exceptio
 const Drink = require("../../../../../src/domain/drinks/entities/Drink");
 
 const repositoryMock = { save: (drink) => { return 1 } }
-
+// red, green and refactor
 describe('Object validations', () => {
   it('Should throw a exception when drink is undefined', () => {
+    //given, when, then GWT
     expect(() => {
-      CreateUseCase(repositoryMock).create()
+      CreateUseCase(repositoryMock).create(undefined)
+    }).toThrowError(InvalidDrinkException)
+  })
+
+  it('Should throw a exception when drink is null', () => {
+    //given, when, then GWT
+    expect(() => {
+      CreateUseCase(repositoryMock).create(null)
     }).toThrowError(InvalidDrinkException)
   })
 

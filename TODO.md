@@ -1,4 +1,4 @@
-## TO-DO DRINk MACHINE
+## TO-DO DRINK MACHINE
 
 ---
 
@@ -40,6 +40,8 @@
     - **GIVEN**
     - **WHEN** call find available drinks function
     - **THEN** see a list of available drinks
+
+---
 
 - ### MR-3:
   #### USER STORY
