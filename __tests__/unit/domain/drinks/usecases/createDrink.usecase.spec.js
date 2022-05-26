@@ -1,4 +1,4 @@
-const CreateUseCase = require('../../../../../src/domain/drinks/usecases/createDrink.usecase')
+const CreateUseCase = require('../../../../../src/domain/drinks/usecases/create.usecase')
 const InvalidDrinkException = require('../../../../../src/domain/drinks/exceptions/InvalidDrinkException');
 const Drink = require("../../../../../src/domain/drinks/entities/Drink");
 
