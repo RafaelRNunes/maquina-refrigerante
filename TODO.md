@@ -45,6 +45,20 @@
 
 - ### MR-3:
   #### USER STORY
+  - **AS A** salesman
+  - **I WANT** to register and manage change coins
+  - **SO THAT** return change coins for customer
+
+  #### ACCEPTANCE CRITERIA
+  - ##### AC-1
+    - **GIVEN** coins
+    - **WHEN** call create coins
+    - **THEN** make these coins available for change coins
+
+---
+
+- ### MR-4:
+  #### USER STORY
   - **AS A** customer
   - **I WANT** to buy a drink
   - **SO THAT** drink the drink
